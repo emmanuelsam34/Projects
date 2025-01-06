@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="projectspage.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link href="projectspage.css" rel="stylesheet">
+    <script src="projectspage.js"></script>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
-    <link src="projectspage.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>PMO</title>
 </head>
-
 <body>
     <header class="header">
         <div class="header-content">
@@ -26,7 +26,7 @@
                     Departments
                     <div class="dropdown-content">
                         <a href="https://erp.ebsafr.com/PMO">PMO</a>
-                        <a href="#">HR</a>
+                        <a href="https://erp.ebsafr.com/HR">HR</a>
                         <a href="#">IT</a>
                         <a href="#">Jollof</a>
                         <a href="#">S & D</a>
@@ -51,21 +51,14 @@
         </div>
     </header>
     
-    <div class="container1"> 
-    <div class="banner-center-content">
-            <div class="left-side-content">
-                 <h1>Welcome to the PMO DEPARTMENT</h1>
-                 <p>Keep track of all the ongoing and upcoming EBS Projects and Initiatives in one place. This platform allows you to monitor progress, stay updated on key milestones, and ensure every project is on track.</p>
-            </div>
-            
-            <div class="right-side-content">
-               <div class="banner-img">
-                   <img src="https://erp.ebsafr.com/files/_529feb3d-6f90-4a77-82b8-3f257f9ce170.jpeg" alt="">
-               </div> 
-            </div>
+    <section class="bg-gray-100 py-20">
+    <div class="container mx-auto px-6 text-center">
+    <h1 class="text-6xl font-bold text-gray-800 mb-4">Welcome to the PMO Department</h1>
+    <p class="text-lg text-gray-600 mb-6">Keep track of all the ongoing and upcoming EBS Projects</p>
+    <a href="#services" class="bg-blue-600 text-white py-3 px-6 rounded-full text-lg hover:bg-blue-700 transition duration-300">Scroll Down</a>
+    </div>
+    </section>
     
-    </div>
-    </div>
     <br>
     <br>
     
@@ -115,7 +108,7 @@
             <div class="project_category category_color1">
             
             </div>
-            <h2>Jollof.com: Web</h2>
+            <h2>Jollof.com: V3.1</h2>
             <p>Active Project</p>
             
             <ul class="activity">
@@ -123,7 +116,7 @@
                 <li>- Responsible: Taofeeq & Praise</li>
             </ul>
             <div class="progress-container">
-            <div class="progress-bar" style="width: 80%;" data-percent="80" font-size="10px;">80%</div>
+            <div class="progress-bar" style="width: 9%;" data-percent="9" font-size="10px;">9%</div>
             </div>
         </div>
         
@@ -155,7 +148,7 @@
                 <li>- Responsible: MD</li>
             </ul>
             <div class="progress-container">
-            <div class="progress-bar" style="width: 80%;" data-percent="80" font-size="10px;">90%</div>
+            <div class="progress-bar" style="width: 90%;" data-percent="90" font-size="10px;">90%</div>
             </div>
         </div>
         
@@ -171,7 +164,39 @@
                 <li>- Responsible: Taofeeq</li>
             </ul>
             <div class="progress-container">
-            <div class="progress-bar" style="width: 80%;" data-percent="80" font-size="10px;">90%</div>
+            <div class="progress-bar" style="width: 58%;" data-percent="58" font-size="10px;">58%</div>
+            </div>
+        </div>
+        
+        <div class="project">
+            <div class="project_category category_color5">
+            
+            </div>
+            <h2>Jollof Catering Services</h2>
+            <p>Active Project</p>
+            
+            <ul class="activity">
+                <li>- Category: Project</li>
+                <li>- Responsible: Anabel</li>
+            </ul>
+            <div class="progress-container">
+            <div class="progress-bar" style="width: 13%;" data-percent="13" font-size="10px;">13%</div>
+            </div>
+        </div>
+        
+        <div class="project">
+            <div class="project_category category_color7">
+            
+            </div>
+            <h2>MTN Nipost - Activation on the Go</h2>
+            <p>Active Project</p>
+            
+            <ul class="activity">
+                <li>- Category: Project</li>
+                <li>- Responsible: Yetunde</li>
+            </ul>
+            <div class="progress-container">
+            <div class="progress-bar" style="width: 63%;" data-percent="63" font-size="10px;">63%</div>
             </div>
         </div>
         
@@ -184,8 +209,8 @@
             <h2><strong>Total Projects</strong></h2>
             <canvas id="myChart" width="600" height="600"></canvas>
             <div class="complete">
-                <h3>3 Completed</h3>
-                <p>from 4 projects</p>
+                <h3>2 Completed</h3>
+                <p>from 14 Projects & Initiatives</p>
             </div>
         </div>
         
@@ -195,7 +220,60 @@
     <br>
     <br>
     <br>
+    <section id="hr-team" class="py-16 bg-gray-100">
+    <div class="max-w-6xl mx-auto px-6">
+    <h3 class="text-3xl font-bold text-center mb-10">Meet the PMO Team</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <div class="bg-white p-6 shadow rounded text-center">
+        <img src="https://erp.ebsafr.com/files/9440461.jpg" alt="PMO Member" class="w-24 h-24 rounded-full mx-auto mb-4">
+        <h4 class="text-lg font-semibold">Demilade Dinakin</h4>
+        <p class="text-gray-600">Head, PMO Department</p>
+        <p class="text-gray-500 mt-2">demmyd@ebsfr.com</p>
+      </div>
+      
+      <div class="bg-white p-6 shadow rounded text-center">
+        <img src="https://erp.ebsafr.com/files/9440461.jpg" alt="PMO Member" class="w-24 h-24 rounded-full mx-auto mb-4">
+        <h4 class="text-lg font-semibold">Emmanuel Agbedejobi</h4>
+        <p class="text-gray-600">Project Coordinator</p>
+        <p class="text-gray-500 mt-2">emmasa@ebsafr.com</p>
+      </div>
+      
+      <div class="bg-white p-6 shadow rounded text-center">
+        <img src="https://erp.ebsafr.com/files/375240158_11475220.jpg" alt="PMO Member" class="w-24 h-24 rounded-full mx-auto mb-4">
+        <h4 class="text-lg font-semibold">Project Intern</h4>
+        <p class="text-gray-600">Intern</p>
+        <p class="text-gray-500 mt-2">xxxxx@ebsafr.com</p>
+      </div>
+      </div>
+     
+    </div>
+    </section>
     
+    <section id="articles" class="py-16 bg-gray-50">
+    <div class="container mx-auto">
+      <h3 class="text-3xl font-bold text-center mb-12">Top Resources</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h4 class="text-xl font-bold mb-3">Transformative Power of AI</h4>
+          <p class="text-gray-600 mb-4">The age of AI is upon us, and organizations not taking advantage of its benefits risk losing out. </p>
+          <a href="https://www.wrike.com/ebook-pmos-use-wrike-ai/" class="text-blue-600 hover:underline">Read More</a>
+        </div>
+        
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h4 class="text-xl font-bold mb-3">10 PMO Best Practices</h4>
+          <p class="text-gray-600 mb-4">The PMO is the vital engine room of change in your business.</p>
+          <a href="https://www.fluid.work/blog/10-pmo-best-practices-that-you-need-to-know" class="text-blue-600 hover:underline">Read More</a>
+        </div>
+        
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h4 class="text-xl font-bold mb-3">PMO & IT Team</h4>
+          <p class="text-gray-600 mb-4">The modern business world is embracing Agile practices to help navigate the treacherous waters.</p>
+          <a href="https://www.bmc.com/blogs/pmo-project-management-office/" class="text-blue-600 hover:underline">Read More</a>
+        </div>
+      </div>
+    </div>
+  </section>
     
-</body>
-</html>
+    </body>
+    

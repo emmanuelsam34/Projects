@@ -1,5 +1,5 @@
 var ctx = document.getElementById('myChart').getContext('2d');
-var myChart = new Chart(ctx, {
+var myChart = new myChart(ctx, {
     type: 'doughnut',
     data: {
         labels: [
@@ -8,8 +8,7 @@ var myChart = new Chart(ctx, {
                 'Completed Projects',
                 'Archived Projects',
                 ],
-        datasets: [{
-        label: 'My First Dataset', 
+        datasets: [{ 
         data: [300, 50, 100, 40],
         backgroundColor: [
             'rgb(255, 99, 132)',
