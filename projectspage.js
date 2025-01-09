@@ -1,5 +1,23 @@
+document.getElementById('pdf-link').addEventListener('click', function (event) {
+    event.preventDefault(); 
+    const pdfUrl = this.getAttribute('data-pdf-url'); 
+    if (pdfUrl) {
+      window.open(pdfUrl, '_blank'); 
+    } else {
+      console.error('PDF URL is missing.');
+    }
+  });
+  
+function openModal(modalId) {
+  document.getElementById(modalId).classList.remove('hidden');
+}
+
+function closeModal(modalId) {
+  document.getElementById(modalId).classList.add('hidden');
+}
+
 var ctx = document.getElementById('myChart').getContext('2d');
-var myChart = new myChart(ctx, {
+var myChart = new Chart(ctx, {
     type: 'doughnut',
     data: {
         labels: [
@@ -8,13 +26,13 @@ var myChart = new myChart(ctx, {
                 'Completed Projects',
                 'Archived Projects',
                 ],
-        datasets: [{ 
-        data: [300, 50, 100, 40],
+        datasets: [{
+        data: [2, 12, 2, 22],
         backgroundColor: [
-            'rgb(255, 99, 132)',
-            'rgb(54, 162, 235)',
-            'rgb(255, 205, 86)',
-            'rgb(242, 244, 243)'
+            'rgb(182, 109, 13)',
+            'rgb(163, 50, 11)',
+            'rgb(4, 119, 59)',
+            'rgb(94, 48, 35)'
         ],
         hoverOffset: 4
         }]

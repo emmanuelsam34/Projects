@@ -486,7 +486,7 @@ body {
     
     section.secondary{
         position: absolute;
-        top: 870px; 
+        top: 800px; 
         right: 80px; 
         width: 400px; 
         padding: 0px;
@@ -531,7 +531,6 @@ body {
     }
     
 }
-
 table, th, td {
     padding: 1rem;
 } 
@@ -539,7 +538,7 @@ table, th, td {
 main.table {
     margin: 0 auto;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1350px;
     padding: 20px;
     background-color: #fff;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
@@ -552,6 +551,221 @@ main.table {
     width: 100%;
     height: 10%;
     padding: .8rem 1rem;
-    background-color: purple;
+    background-color: #091540;
+    text-align: center;
+    font-weight: 50px;
+}
+
+.table-header h1{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 30;
+    font-size: 28px;
+    color: white;
+}
+
+.table-body{
+    margin: .10rem auto;
+    border-radius: .8rem;
+}
+
+tbody tr:nth-child(even){
+    background-color: #fbf5f3;
+    color: black;
+}
+
+tbody tr:nth-child(odd){
+    color: black;
+}
+
+.Status-Ongoing{
+    background-color: #f9dc5c;
+    color: black;
+    padding: .4rem 0;
+    border-radius: 2rem;
     text-align: center;
 }
+
+.Status-Completed{
+    background-color: #4cb944;
+    color: black;
+    padding: .3rem 0;
+    border-radius: 3rem;
+    text-align: center;
+}
+
+
+.progress-container1 {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 35px;
+    position: relative;
+  }
+
+  .progress-bar1 {
+    height: 100%;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    transition: width 0.3s ease;
+    font-size: 10px;
+}
+
+
+.progress-bar1[data-percent="100"] { background-color: darkgreen;}
+  .progress-bar1[data-percent="99"] { background-color: darkgreen;}
+  .progress-bar1[data-percent="98"] { background-color: darkgreen;}
+  .progress-bar1[data-percent="97"] { background-color: darkgreen;}
+  .progress-bar1[data-percent="96"] { background-color: darkgreen;}
+  .progress-bar1[data-percent="95"] { background-color: darkgreen;}
+  .progress-bar1[data-percent="94"] { background-color: darkgreen;}
+  .progress-bar1[data-percent="93"] { background-color: darkgreen;}
+  .progress-bar1[data-percent="92"] { background-color: darkgreen;}
+  .progress-bar1[data-percent="91"] { background-color: darkgreen;}
+  .progress-bar1[data-percent="90"] { background-color: darkgreen;}
+  .progress-bar1[data-percent="89"] { background-color: darkgreen;}
+  .progress-bar1[data-percent="88"] { background-color: darkgreen;}
+  .progress-bar1[data-percent="87"] { background-color: darkgreen;}
+  .progress-bar1[data-percent="86"] { background-color: darkgreen;}
+  .progress-bar1[data-percent="85"] { background-color: darkgreen;}
+  .progress-bar1[data-percent="84"] { background-color: darkgreen;}
+  .progress-bar1[data-percent="83"] { background-color: darkgreen;}
+  .progress-bar1[data-percent="82"] { background-color: darkgreen;}
+  .progress-bar1[data-percent="81"] { background-color: darkgreen;}
+  .progress-bar1[data-percent="80"] { background-color: darkgreen;}
+  .progress-bar1[data-percent="79"] { background-color: darkorange;}
+  .progress-bar1[data-percent="78"] { background-color: darkorange;}
+  .progress-bar1[data-percent="77"] { background-color: darkorange;}
+  .progress-bar1[data-percent="76"] { background-color: darkorange;}
+  .progress-bar1[data-percent="75"] { background-color: darkorange;}
+  .progress-bar1[data-percent="74"] { background-color: darkorange;}
+  .progress-bar1[data-percent="73"] { background-color: darkorange;}
+  .progress-bar1[data-percent="72"] { background-color: darkorange;}
+  .progress-bar1[data-percent="71"] { background-color: darkorange;}
+  .progress-bar1[data-percent="70"] { background-color: darkorange;}
+  .progress-bar1[data-percent="69"] { background-color: darkorange;}
+  .progress-bar1[data-percent="68"] { background-color: darkorange;}
+  .progress-bar1[data-percent="67"] { background-color: darkorange;}
+  .progress-bar1[data-percent="66"] { background-color: darkorange;}
+  .progress-bar1[data-percent="65"] { background-color: darkorange;}
+  .progress-bar1[data-percent="64"] { background-color: darkorange;}
+  .progress-bar1[data-percent="63"] { background-color: darkorange;}
+  .progress-bar1[data-percent="62"] { background-color: darkorange;}
+  .progress-bar1[data-percent="61"] { background-color: darkorange;}
+  .progress-bar1[data-percent="60"] { background-color: darkorange;}
+  .progress-bar1[data-percent="59"] { background-color: darkorange;}
+  .progress-bar1[data-percent="58"] { background-color: darkorange;}
+  .progress-bar1[data-percent="57"] { background-color: darkorange;}
+  .progress-bar1[data-percent="56"] { background-color: darkorange;}
+  .progress-bar1[data-percent="55"] { background-color: darkorange;}
+  .progress-bar1[data-percent="54"] { background-color: darkorange;}
+  .progress-bar1[data-percent="53"] { background-color: darkorange;}
+  .progress-bar1[data-percent="52"] { background-color: darkorange;}
+  .progress-bar1[data-percent="51"] { background-color: darkorange;}
+  .progress-bar1[data-percent="50"] { background-color: darkorange;}
+  .progress-bar1[data-percent="49"] { background-color: red;}
+  .progress-bar1[data-percent="48"] { background-color: red;}
+  .progress-bar1[data-percent="47"] { background-color: red;}
+  .progress-bar1[data-percent="46"] { background-color: red;}
+  .progress-bar1[data-percent="45"] { background-color: red;}
+  .progress-bar1[data-percent="44"] { background-color: red;}
+  .progress-bar1[data-percent="43"] { background-color: red;}
+  .progress-bar1[data-percent="42"] { background-color: red;}
+  .progress-bar1[data-percent="41"] { background-color: red;}
+  .progress-bar1[data-percent="40"] { background-color: red;}
+  .progress-bar1[data-percent="39"] { background-color: red;}
+  .progress-bar1[data-percent="38"] { background-color: red;}
+  .progress-bar1[data-percent="37"] { background-color: red;}
+  .progress-bar1[data-percent="36"] { background-color: red;}
+  .progress-bar1[data-percent="35"] { background-color: red;}
+  .progress-bar1[data-percent="34"] { background-color: red;}
+  .progress-bar1[data-percent="33"] { background-color: red;}
+  .progress-bar1[data-percent="32"] { background-color: red;}
+  .progress-bar1[data-percent="31"] { background-color: red;}
+  .progress-bar1[data-percent="30"] { background-color: red;}
+  .progress-bar1[data-percent="29"] { background-color: red;}
+  .progress-bar1[data-percent="28"] { background-color: red;}
+  .progress-bar1[data-percent="27"] { background-color: red;}
+  .progress-bar1[data-percent="26"] { background-color: red;}
+  .progress-bar1[data-percent="25"] { background-color: red;}
+  .progress-bar1[data-percent="24"] { background-color: red;}
+  .progress-bar1[data-percent="23"] { background-color: red;}
+  .progress-bar1[data-percent="22"] { background-color: red;}
+  .progress-bar1[data-percent="21"] { background-color: red;}
+  .progress-bar1[data-percent="20"] { background-color: red;}
+  .progress-bar1[data-percent="19"] { background-color: red;}
+  .progress-bar1[data-percent="18"] { background-color: red;}
+  .progress-bar1[data-percent="17"] { background-color: red;}
+  .progress-bar1[data-percent="16"] { background-color: red;}
+  .progress-bar1[data-percent="15"] { background-color: red;}
+  .progress-bar1[data-percent="14"] { background-color: red;}
+  .progress-bar1[data-percent="13"] { background-color: red;}
+  .progress-bar1[data-percent="12"] { background-color: red;}
+  .progress-bar1[data-percent="11"] { background-color: red;}
+  .progress-bar1[data-percent="10"] { background-color: red;}
+  .progress-bar1[data-percent="9"] { background-color: red;}
+  .progress-bar1[data-percent="8"] { background-color: red;}
+  .progress-bar1[data-percent="7"] { background-color: red;}
+  .progress-bar1[data-percent="6"] { background-color: red;}
+  .progress-bar1[data-percent="5"] { background-color: red;}
+  .progress-bar1[data-percent="4"] { background-color: red;}
+  .progress-bar1[data-percent="3"] { background-color: red;}
+  .progress-bar1[data-percent="2"] { background-color: red;}
+  .progress-bar1[data-percent="1"] { background-color: red;}
+  
+  
+  
+  .pdf-viewer {
+            width: 100%;
+            height: 500px;
+            border: none;
+        }
+        
+                /* Modal styling */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 50px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-content {
+            margin: auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            width: 80%;
+            max-width: 800px;
+        }
+
+        .close-btn {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close-btn:hover,
+        .close-btn:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .pdf-viewer {
+            width: 100%;
+            height: 500px;
+            border: none;
+        }
+  
+ 
