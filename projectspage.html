@@ -53,15 +53,13 @@
     
     <section class="bg-gray-100 py-20">
     <div class="container mx-auto px-6 text-center">
-    <h1 class="text-6xl font-bold text-gray-800 mb-4">Welcome to the PMO Department</h1>
+    <h1 class="text-6xl font-bold text-gray-800 mb-4">Turning Plans into Results</h1>
     <p class="text-lg text-gray-600 mb-6">Keep track of all the ongoing and upcoming EBS Projects</p>
     <a href="#services" class="bg-blue-600 text-white py-3 px-6 rounded-full text-lg hover:bg-blue-700 transition duration-300">Scroll Down</a>
     </div>
     </section>
-    
     <br>
     <br>
-    
     <div class="next-section">
     <section class="icon-links">
         <a href="#" class="icon-link" style="text-decoration: none;">
@@ -93,6 +91,19 @@
             <span>PMO Resources</span>
         </a>
     </section>
+    
+    <div id="pdfModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeModal">&times;</span>
+            <iframe 
+                id="pdfIframe"
+                class="pdf-viewer" 
+                src="" 
+                type="application/pdf">
+            </iframe>
+            <div class="overlay" oncontextmenu="return false;"></div>
+        </div>
+    </div>
 
     <div class="dashboard">
         <section class="main">
@@ -108,7 +119,7 @@
             <div class="project_category category_color1">
             
             </div>
-            <h2>Jollof.com: V3.1</h2>
+            <h2>Jollof.com: v3.1</h2>
             <p>Active Project</p>
             
             <ul class="activity">
@@ -168,6 +179,7 @@
             </div>
         </div>
         
+        <!--
         <div class="project">
             <div class="project_category category_color5">
             
@@ -198,7 +210,7 @@
             <div class="progress-container">
             <div class="progress-bar" style="width: 63%;" data-percent="63" font-size="10px;">63%</div>
             </div>
-        </div>
+        </div>-->
         
         
         </div>
@@ -217,6 +229,8 @@
         </section>
     </div>
     </div>
+    <br>
+    <br>
     <section>
         <main class="table">
             <section class="table-header">
@@ -226,159 +240,498 @@
              <table>
                 <thead>
                     <tr>
-                        <th>Project Title</th>
+                        <th>SN</th>
+                        <th>Project Title (Selected)</th>
                         <th>Category</th>
                         <th>Responsible</th>
                         <th>Start Date</th>
                         <th>End Date</th>
                         <th>Status</th>
                         <th>Completion</th>
+                        <th>Updates</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
+                        <td>1</td>
                         <td>Location Based Services (LBS) - Telcovas</td>
                         <td>Initiative</td>
                         <td>MD</td>
                         <td>25-07-24</td>
                         <td>03-10-24</td>
-                        <td>Ongoing</td>
-                        <td>80%</td>
+                        <td><p class="Status-Ongoing">Ongoing</p></td>
+                        <td><div class="progress-container1">
+                        <div class="progress-bar1" style="width: 80%;" data-percent="80" font-size="10px;">80%</div>
+                        </div></td>
+                        <td><button 
+                        class="text-blue-500 font-semibold"
+                        onclick="openModal('birthdayModal')">
+                        Latest Update
+                        </button></td>
                     </tr>
+                    
                     <tr>
+                        <td>2</td>
                         <td>LSLGA - Customer Management System (CMS)</td>
                         <td>Initiative</td>
                         <td>MD</td>
                         <td>08-07-24</td>
                         <td>19-02-25</td>
-                        <td>Ongoing</td>
-                        <td>19%</td>
+                        <td><p class="Status-Ongoing">Ongoing</p></td>
+                        <td><div class="progress-container1">
+                        <div class="progress-bar1" style="width: 19%;" data-percent="19" font-size="10px;">19%</div>
+                        </div></td>
+                        <td><button 
+                        class="text-green-500 font-semibold"
+                        onclick="openModal('eventModal')">
+                        Latest Update
+                        </button></td>
                     </tr>
                     <tr>
+                        <td>3</td>
                         <td>Jollof.com - v3.1</td>
                         <td>Project</td>
                         <td>Taofeeq and Praise</td>
                         <td>16-04-24</td>
                         <td>25-07-24</td>
-                        <td>Ongoing</td>
-                        <td>9%</td>
+                        <td><p class="Status-Ongoing">Ongoing</p></td>
+                        <td><div class="progress-container1">
+                        <div class="progress-bar1" style="width: 9%;" data-percent="9" font-size="10px;">9%</div>
+                        </div></td>
+                        <td><button 
+                        class="text-purple-500 font-semibold"
+                        onclick="openModal('thirdModal')">
+                        Latest Updates
+                        </button></td>
                     </tr>
                     <tr>
+                        <td>4</td>
                         <td>Jollof.com - Mobile App (User)</td>
                         <td>Project</td>
                         <td>Timothy</td>
                         <td>19-08-24</td>
                         <td>25-10-24</td>
-                        <td>Ongoing</td>
-                        <td>86%</td>
+                        <td><p class="Status-Ongoing">Ongoing</p></td>
+                        <td><div class="progress-container1">
+                        <div class="progress-bar1" style="width: 86%;" data-percent="86" font-size="10px;">86%</div>
+                        </div></td>
+                        <td><button 
+                        class="text-red-500 font-semibold"
+                        onclick="openModal('fourthModal')">
+                        Latest Update
+                        </button></td>
                     </tr>
                     <tr>
+                        <td>5</td>
                         <td>Jollof.com - Mobile App (Merchant)</td>
                         <td>Project</td>
                         <td>Timothy</td>
                         <td>27-11-24</td>
                         <td>20-12-24</td>
-                        <td>Ongoing</td>
-                        <td>32%</td>
+                        <td><p class="Status-Ongoing">Ongoing</p></td>
+                        <td><div class="progress-container1">
+                        <div class="progress-bar1" style="width: 32%;" data-percent="32" font-size="10px;">32%</div>
+                        </div></td>
+                        <td><button 
+                        class="text-yellow-500 font-semibold"
+                        onclick="openModal('fifthModal')">
+                        Latest Update
+                        </button></td>
                     </tr>
                     <tr>
+                        <td>6</td>
                         <td>Afro-Fusion Confectionaries</td>
                         <td>Project</td>
                         <td>Anabel</td>
                         <td>18-09-24</td>
                         <td>30-10-24</td>
-                        <td>Ongoing</td>
-                        <td>96%</td>
+                        <td><p class="Status-Ongoing">Ongoing</p></td>
+                        <td><div class="progress-container1">
+                        <div class="progress-bar1" style="width: 96%;" data-percent="96" font-size="10px;">96%</div>
+                        </div></td>
+                        <td><button 
+                        class="text-orange-500 font-semibold"
+                        onclick="openModal('sixthModal')">
+                        Latest Update
+                        </button></td>
                     </tr>
                     <tr>
+                        <td>7</td>
                         <td>Jollof Catering Services</td>
                         <td>Project</td>
                         <td>Anabel</td>
                         <td>05-11-24</td>
                         <td>13-12-24</td>
-                        <td>Ongoing</td>
-                        <td>13%</td>
+                        <td><p class="Status-Ongoing">Ongoing</p></td>
+                        <td><div class="progress-container1">
+                        <div class="progress-bar1" style="width: 13%;" data-percent="13" font-size="10px;">13%</div>
+                        </div></td>
+                        <td><button 
+                        class="text-blue-500 font-semibold"
+                        onclick="openModal('seventhModal')">
+                        Latest Update
+                        </button></td>
                     </tr>
                     <tr>
+                        <td>8</td>
                         <td>MTN-NIPOST - Vending App</td>
                         <td>Project</td>
                         <td>Yetunde</td>
                         <td>10-08-24</td>
                         <td>03-09-24</td>
-                        <td>Ongoing</td>
-                        <td>82%</td>
+                        <td><p class="Status-Ongoing">Ongoing</p></td>
+                        <td><div class="progress-container1">
+                        <div class="progress-bar1" style="width: 82%;" data-percent="82" font-size="10px;">82%</div>
+                        </div></td>
+                        <td><button 
+                        class="text-purple-500 font-semibold"
+                        onclick="openModal('eightModal')">
+                        Latest Update
+                        </button></td>
                     </tr>
                     <tr>
+                        <td>9</td>
                         <td>MTN-NIPOST - Activation on the Go</td>
                         <td>Project</td>
                         <td>Yetunde</td>
                         <td>23-09-24</td>
                         <td>23-10-24</td>
-                        <td>Ongoing</td>
-                        <td>63%</td>
+                        <td><p class="Status-Ongoing">Ongoing</p></td>
+                        <td><div class="progress-container1">
+                        <div class="progress-bar1" style="width: 63%;" data-percent="63" font-size="10px;">63%</div>
+                        </div></td>
+                        <td><button 
+                        class="text-blue-500 font-semibold"
+                        onclick="openModal('ninthModal')">
+                        Latest Update
+                        </button></td>
                     </tr>
                     <tr>
+                        <td>10</td>
                         <td>TECH5 - Phase 1</td>
                         <td>Project</td>
                         <td>MD</td>
                         <td>01-12-23</td>
                         <td>31-08-24</td>
-                        <td>Ongoing</td>
-                        <td>90%</td>
+                        <td><p class="Status-Ongoing">Ongoing</p></td>
+                        <td><div class="progress-container1">
+                        <div class="progress-bar1" style="width: 90%;" data-percent="90" font-size="10px;">90%</div>
+                        </div></td>
+                        <td><button 
+                        class="text-yellow-500 font-semibold"
+                        onclick="openModal('tenthModal')">
+                        Latest Update
+                        </button></td>
                     </tr>
                     <tr>
+                        <td>11</td>
                         <td>MoMo - Lightway Finance</td>
                         <td>Project</td>
                         <td>Taofeeq</td>
                         <td>19-08-24</td>
                         <td>16-09-24</td>
-                        <td>Ongoing</td>
-                        <td>58%</td>
+                        <td><p class="Status-Ongoing">Ongoing</p></td>
+                        <td><div class="progress-container1">
+                        <div class="progress-bar1" style="width: 58%;" data-percent="58" font-size="10px;">58%</div>
+                        </div></td>
+                        <td><button 
+                        class="text-blue-500 font-semibold"
+                        onclick="openModal('eleventhModal')">
+                        Latest Update
+                        </button></td>
                     </tr>
                     <tr>
+                        <td>12</td>
                         <td>CRM - ERPNext</td>
                         <td>Project</td>
                         <td>Demi</td>
                         <td>23-03-24</td>
                         <td>21-08-24</td>
-                        <td>Ongoing</td>
-                        <td>72%</td>
+                        <td><p class="Status-Ongoing">Ongoing</p></td>
+                        <td><div class="progress-container1">
+                        <div class="progress-bar1" style="width: 72%;" data-percent="72" font-size="10px;">72%</div>
+                        </div></td>
+                        <td><button 
+                        class="text-green-500 font-semibold"
+                        onclick="openModal('twelvethModal')">
+                        Latest Update
+                        </button></td>
                     </tr>
                     <tr>
+                        <td>13</td>
                         <td>EBS Intranet</td>
                         <td>Project</td>
                         <td>Preye</td>
                         <td>07-10-24</td>
                         <td>28-10-24</td>
-                        <td>Ongoing</td>
-                        <td>30%</td>
+                        <td><p class="Status-Ongoing">Ongoing</p></td>
+                        <td><div class="progress-container1">
+                        <div class="progress-bar1" style="width: 30%;" data-percent="30" font-size="10px;">30%</div>
+                        </div></td>
+                        <td><button 
+                        class="text-purple-500 font-semibold"
+                        onclick="openModal('thirteenthModal')">
+                        Latest Update
+                        </button></td>
                     </tr>
                     <tr>
+                        <td>14</td>
                         <td>Marketing & Campaign</td>
                         <td>Project</td>
                         <td>Anabel</td>
                         <td>09-09-24</td>
                         <td>18-09-24</td>
-                        <td>Ongoing</td>
-                        <td>67%</td>
+                        <td><p class="Status-Ongoing">Ongoing</p></td>
+                        <td><div class="progress-container1">
+                        <div class="progress-bar1" style="width: 67%;" data-percent="67" font-size="10px;">67%</div>
+                        </div></td>
+                        <td><button 
+                        class="text-orange-500 font-semibold"
+                        onclick="openModal('fourteenthModal')">
+                        Latest Update
+                        </button></td>
                     </tr>
                     <tr>
+                        <td>15</td>
                         <td>Taro Immigration</td>
                         <td>Project</td>
                         <td>Taofeeq</td>
                         <td>09-07-24</td>
                         <td>26-08-24</td>
-                        <td>Completed</td>
-                        <td>100%</td>
+                        <td><p class="Status-Completed">Completed</p></td>
+                        <td><div class="progress-container1">
+                        <div class="progress-bar1" style="width: 100%;" data-percent="100" font-size="10px;">100%</div>
+                        </div></td>
+                        <td><button 
+                        class="text-green-500 font-semibold"
+                        onclick="openModal('fifteenthModal')">
+                        Latest Update
+                        </button></td>
                     </tr>
                 </tbody>
              </table>   
             </section>
         </main>
     </section>
-    <br>
-    <br>
-    <br>
+    
+    <div id="birthdayModal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center">
+    <div class="bg-white w-96 p-6 rounded shadow-lg">
+    <h4 class="text-xl font-bold mb-4">Latest Update - LBS (Telcovas)</h4>
+    <p class="text-gray-700">The Demo Platform access has been granted for testing purposes. </p>
+    <button
+    class="mt-6 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+    onclick="closeModal('birthdayModal')">
+    Close
+    </button>
+    </div>
+    </div>
+    
+    <div id="eventModal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center">
+    <div class="bg-white w-96 p-6 rounded shadow-lg">
+    <h4 class="text-xl font-bold mb-4">Latest Update - LSLGA (CMS)</h4>
+    <p class="text-gray-700">The development the Business Requirements Document the-off are currently in progress. </p>
+    <button
+    class="mt-6 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+    onclick="closeModal('eventModal')">
+    Close
+    </button>
+    </div>
+    </div>
+    
+    <div id="thirdModal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center">
+    <div class="bg-white w-96 p-6 rounded shadow-lg">
+    <h4 class="text-xl font-bold mb-4">Latest Update - Jollof v3.1</h4>
+    <p class="text-gray-700"><ol>
+        <li>- The <strong>Merchant App</strong> is currently at the testing phase of development.</li>
+        <li>- The <strong>Fashion UI Designs</strong> is currently in progress with a completion rate of 40%.</li>
+    </ol><p>
+    <button
+    class="mt-6 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+    onclick="closeModal('thirdModal')">
+    Close
+    </button>
+    </div>
+    </div>
+    
+    <div id="fourthModal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center">
+    <div class="bg-white w-96 p-6 rounded shadow-lg">
+    <h4 class="text-xl font-bold mb-4">Latest Update - Jollof (Mobile App - User)</h4>
+    <p class="text-gray-700">The Apple Store deployment is still pending because the developer's account has not yet been approved by Apple.</p>
+    <button
+    class="mt-6 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+    onclick="closeModal('fourthModal')">
+    Close
+    </button>
+    </div>
+    </div>
+    
+    <div id="fifthModal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center">
+    <div class="bg-white w-96 p-6 rounded shadow-lg">
+    <h4 class="text-xl font-bold mb-4">Latest Update - Jollof (Mobile App - Merchant)</h4>
+    <p class="text-gray-700">The app is presently in the testing phase of development championed by the QA team</p>
+    <button
+    class="mt-6 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+    onclick="closeModal('fifthModal')">
+    Close
+    </button>
+    </div>
+    </div>
+    
+    <div id="sixthModal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center">
+    <div class="bg-white w-96 p-6 rounded shadow-lg">
+    <h4 class="text-xl font-bold mb-4">Latest Update - Afro-Fusion Confectioneries</h4>
+    <p class="text-gray-700">The business been successfully trademarked is currently in the awareness stage.</p>
+    <button
+    class="mt-6 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+    onclick="closeModal('sixthModal')">
+    Close
+    </button>
+    </div>
+    </div>
+    
+    <div id="seventhModal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center">
+    <div class="bg-white w-96 p-6 rounded shadow-lg">
+    <h4 class="text-xl font-bold mb-4">Latest Update - Jollof Catering Services</h4>
+    <p class="text-gray-700">We are currently in the process of implementing the invoicing system on the platform.</p>
+    <button
+    class="mt-6 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+    onclick="closeModal('seventhModal')">
+    Close
+    </button>
+    </div>
+    </div>
+    
+    <div id="eightModal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center">
+    <div class="bg-white w-96 p-6 rounded shadow-lg">
+    <h4 class="text-xl font-bold mb-4">Latest Update - MTN-NIPOST (Vending App)</h4>
+    <p class="text-gray-700">We are presently in the pilot phase and the stage of assessing the revenue breakdown.</p>
+    <button
+    class="mt-6 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+    onclick="closeModal('eightModal')">
+    Close
+    </button>
+    </div>
+    </div>
+    
+    <div id="ninthModal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center">
+    <div class="bg-white w-96 p-6 rounded shadow-lg">
+    <h4 class="text-xl font-bold mb-4">Latest Update - MTN-NIPOST (Activation on the Go)</h4>
+    <p class="text-gray-700">We are presently in the pilot phase and the stage of assessing the revenue breakdown.</p>
+    <button
+    class="mt-6 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+    onclick="closeModal('ninthModal')">
+    Close
+    </button>
+    </div>
+    </div>
+    
+    <div id="tenthModal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center">
+    <div class="bg-white w-96 p-6 rounded shadow-lg">
+    <h4 class="text-xl font-bold mb-4">Latest Update -  TECH5 (Phase I)</h4>
+    <p class="text-gray-700">Ongoing project support (L1 & L2) currently ongoing.</p>
+    <button
+    class="mt-6 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+    onclick="closeModal('tenthModal')">
+    Close
+    </button>
+    </div>
+    </div>
+    
+    <div id="eleventhModal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center">
+    <div class="bg-white w-96 p-6 rounded shadow-lg">
+    <h4 class="text-xl font-bold mb-4">Latest Update -  MoMo – LightWay Finance</h4>
+    <p class="text-gray-700">Development of a customized admin portal the MTN team to monitor ongoing transactions currently ongoing.</p>
+    <button
+    class="mt-6 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+    onclick="closeModal('eleventhModal')">
+    Close
+    </button>
+    </div>
+    </div>
+    
+    <div id="twelvethModal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center">
+    <div class="bg-white w-96 p-6 rounded shadow-lg">
+    <h4 class="text-xl font-bold mb-4">Latest Update -  CRM - ERPNext</h4>
+    <p class="text-gray-700">Integration and testing of the embedded CRM support link on the vending app and activation on-the-go platforms currently ongoing.</p>
+    <button
+    class="mt-6 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+    onclick="closeModal('twelvethModal')">
+    Close
+    </button>
+    </div>
+    </div>
+    
+    <div id="thirteenthModal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center">
+    <div class="bg-white w-96 p-6 rounded shadow-lg">
+    <h4 class="text-xl font-bold mb-4">Latest Update -  EBS Intranet</h4>
+    <p class="text-gray-700">
+        <ol>
+            <li>- Landing page update – enhancements still ongoing</li>
+            <li>- HR and PMO Dept page update currently ongoing</li>
+            <li>- Content collation for other departments currently ongoing</li>
+        </ol>
+    <p>
+    <button
+    class="mt-6 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+    onclick="closeModal('thirteenthModal')">
+    Close
+    </button>
+    </div>
+    </div>
+    
+    <div id="fourteenthModal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center">
+    <div class="bg-white w-96 p-6 rounded shadow-lg">
+    <h4 class="text-xl font-bold mb-4">Latest Update -  Marketing and Campaign</h4>
+    <p class="text-gray-700">
+        <ol>
+            <li>- Creation of campaign & awareness materials for January 2025 currently ongoing.</li>
+            <li>- Automated marketing configuration for email campaigns for January currently ongoing.</li>
+        </ol>
+    <p>
+    <button
+    class="mt-6 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+    onclick="closeModal('fourteenthModal')">
+    Close
+    </button>
+    </div>
+    </div>
+    
+    <div id="fifteenthModal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center">
+    <div class="bg-white w-96 p-6 rounded shadow-lg">
+    <h4 class="text-xl font-bold mb-4">Latest Update -  Taro Immigration</h4>
+    <p class="text-gray-700">The project has been successfully completed.</p>
+    <button
+    class="mt-6 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+    onclick="closeModal('fifteenthModal')">
+    Close
+    </button>
+    </div>
+    </div>
+    
+    <section id="documents" class="py-16 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-6">
+    <h3 class="text-3xl font-bold text-center mb-10">Documents and Forms</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      
+      <div class="bg-white p-6 shadow rounded text-center"><h4 class="text-xl font-semibold mb-4">Change Request</h4>
+        <a href="https://erp.ebsafr.com/app/change-request/new-change-request-1" class="link">
+        <button class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Apply</button>
+        </a>
+      </div>
+      
+      <div class="bg-white p-6 shadow rounded text-center">
+        <h4 class="text-xl font-semibold mb-4">IT Asset Policy</h4>
+        <a href="#" data-pdf-url="https://erp.ebsafr.com/files/EBS%20IT%20Policy%202024.pdf" id="pdf-link">
+        <button class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">View</button>
+        </a>
+      </div>
+      <div class="bg-white p-6 shadow rounded text-center">
+        <h4 class="text-xl font-semibold mb-4">Asset Allocation Form</h4>
+        <button class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Submit</button>
+      </div>
+    </div>
+     </div>
+    </section>
     <section id="hr-team" class="py-16 bg-gray-100">
     <div class="max-w-6xl mx-auto px-6">
     <h3 class="text-3xl font-bold text-center mb-10">Meet the PMO Team</h3>
@@ -433,6 +786,25 @@
       </div>
     </div>
   </section>
+    <section id="faqs" class="py-16 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-6">
+        <h3 class="text-3xl font-bold text-center mb-10">Frequently Asked Questions</h3>
+        <div class="space-y-4">
+        <div class="bg-white p-4 rounded shadow">
+            <h4 class="text-lg font-semibold">What is the role of the Project Management Office (PMO) in our organization?</h4>
+            <p class="text-gray-700 mt-2">The PMO provides governance, standards, and support for managing projects across the organization. We ensure that projects align with strategic goals, monitor progress, manage risks, and provide tools, templates, and training to enhance project delivery.</p>
+        </div>
+            <div class="bg-white p-4 rounded shadow">
+            <h4 class="text-lg font-semibold">How do I fill out a Change Request Form?</h4>
+            <p class="text-gray-700 mt-2">Click on the Change Request card on the PMO Section of the Intranet, fill in the necessary information and submit</p>
+            </div>
+            <div class="bg-white p-4 rounded shadow">
+            <h4 class="text-lg font-semibold">How do I track the progress of my project on the intranet?</h4>
+            <p class="text-gray-700 mt-2">Navigate to the PMO section on the Intranet and scroll down to the projects section to obtain real updates.</p>
+      </div>
+    </div>
+  </div>
+</section>
     
     </body>
     
